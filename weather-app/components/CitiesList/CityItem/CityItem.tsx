@@ -1,12 +1,8 @@
 import { FC, useRef } from "react";
 import {
-  FlatList,
   Text,
-  TextInput,
   View,
   StyleSheet,
-  ScrollView,
-  TouchableHighlight,
   Button,
   Animated,
   TouchableOpacity,
