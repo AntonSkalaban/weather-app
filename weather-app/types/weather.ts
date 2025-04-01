@@ -25,20 +25,20 @@ interface BaseWeather {
   windspeed: number;
 }
 
-interface CurrentConditions extends BaseWeather {
+export interface CurrentConditions extends BaseWeather {
   moonphase: number;
-  stations: any[]; // Assuming it's an array of station objects, replace any with a more specific type if available
+  stations: any[];
   sunrise: string;
   sunriseEpoch: number;
   sunset: string;
   sunsetEpoch: number;
 }
 
-interface WeatherHour extends BaseWeather {
+export interface WeatherHour extends BaseWeather {
   stations: string[];
 }
 
-interface WeatherDay extends BaseWeather {
+export interface WeatherDay extends BaseWeather {
   description: string;
   feelslikemax: number;
   feelslikemin: number;
@@ -54,9 +54,9 @@ interface WeatherDay extends BaseWeather {
   tempmin: number;
 }
 
-interface WeatherData {
+export interface WeatherData {
   address: string;
-  alerts: any[]; // Assuming it's an array of alert objects, replace any with a more specific type if available
+  alerts: any[];
   currentConditions: CurrentConditions;
   days: WeatherDay[];
   description: string;
