@@ -1,14 +1,9 @@
-import { WeatherDay } from "@/types/weather";
-import { View, Image, StyleSheet, Text, FlatList } from "react-native";
+import { View, StyleSheet, Text, FlatList } from "react-native";
 import HourlyForecast from "@/components/HourlyForecast/HourlyForecast";
 import { fahrenheitToCelsius } from "@/utils/fahrenheitToCelsius";
 import { useGetCity, useGetCurrentLocation, useGetWeather } from "@/hooks/api";
+import { getWeekdayName } from "@/utils/getWeekDay";
 
-const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-const getWeekdayName = (day: WeatherDay) => {
-  return weekday[new Date(day.datetime).getDay()];
-};
 
 export default function Weekly() {
   const { coords } = useGetCurrentLocation();
